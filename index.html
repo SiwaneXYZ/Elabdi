@@ -22,6 +22,19 @@
             border-bottom: 1px solid #ccc;
             width: 100%;
         }
+        html, body {
+    overflow-x: hidden; /* منع التمرير الأفقي */
+    width: 100%;
+}
+
+.slider {
+    max-width: 100%; /* التأكد من أن السلايدر لا يتجاوز العرض */
+}
+
+img {
+    max-width: 100%; /* منع الصور من تجاوز عرض الشاشة */
+    height: auto;
+}
         img {
             max-width: 100%;
             height: auto;
@@ -57,15 +70,18 @@
             border-radius: 10px;
         }
         .slides {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        .slides.active {
-            opacity: 1;
-        }
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none; /* تعطيل التفاعل مع الشرائح غير النشطة */
+}
+
+.slides.active {
+    opacity: 1;
+    pointer-events: auto; /* السماح بالتفاعل فقط مع الشريحة النشطة */
+}
         .slides img {
             width: 100%;
             height: 100%;
