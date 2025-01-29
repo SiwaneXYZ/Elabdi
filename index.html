@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html dir='rtl' lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة ويب تجريبية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            color: black;
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 90%;
+            text-align: center;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+            width: 90%;
+            max-width: 800px;
+        }
+        iframe {
+            width: 80%;
+            height: 300px;
+            border-radius: 10px;
+        }
+        .slider {
+            position: relative;
+            max-width: 400px;
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+            aspect-ratio: 9/16;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .slides {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .slides.active {
+            opacity: 1;
+        }
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 76, 75, 0.62);
+            padding: 10px;
+            border-radius: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            color: black;
+            border-top: 1px solid #ccc;
+            width: 100%;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            border-radius: 15px;
+        }
+        .small-image {
+            width: 80%;
+            max-width: 640px;
+            height: auto;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>عنوان الصفحة</h1>
+    </header>
+
+    <div class="image-container">
+        <img class="small-image" src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/elabdi.jpeg" alt="صورة بحجم 16:9">
+    </div>
+
+    <div class="content">
+        <p>هذا نص داخل صندوق. يمكنك إضافة المزيد من المحتوى هنا.</p>
+    </div>
+    <br/><hr/>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/id=exampl" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <br/><hr/>
+    <!-- السلايدر -->
+    <div class="slider">
+        <div class="slides active">
+            <a href="https://www.example1.com" target="_blank">
+                <img class="small-image" src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/1.jpg" alt="صورة 1">
+                <div class="overlay">
+                    <h2>عنوان الصورة 1</h2>
+                </div>
+            </a>
+        </div>
+        <div class="slides">
+            <a href="https://www.example2.com" target="_blank">
+                <img class="small-image" src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/2.jpg" alt="صورة 2">
+                <div class="overlay">
+                    <h2>عنوان الصورة 2</h2>
+                </div>
+            </a>
+        </div>
+        <div class="slides">
+            <a href="https://www.example3.com" target="_blank">
+                <img class="small-image" src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/3.jpg" alt="صورة 3">
+                <div class="overlay">
+                    <h2>عنوان الصورة 3</h2>
+                </div>
+            </a>
+        </div>
+        <div class="slides">
+            <a href="https://www.example4.com" target="_blank">
+                <img class="small-image" src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/4.jpg" alt="صورة 4">
+                <div class="overlay">
+                    <h2>عنوان الصورة 4</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+    <br/><hr/>
+    <div class="content">
+     <p>تم استلام جثة أنثى بالغة، تم التعرف عليها مبدئيًا باسم فاطمة، عمرها 20 سنة، من دوار زومي. الجثة تم العثور عليها في منزل تعرض لحريق، وتم نقلها إلى مستشفى الأيوبي لإجراء التشريح الطبي.
+نتائج التشريح الطبي:
+السيدة فاطمة حامل في أسبوعها الخامس 
+أسباب الوفاة:
+الاحتراق: تم العثور على آثار حروق من الدرجة الثالثة تغطي أكثر من 70% من جسم الضحية، بما في ذلك الوجه والصدر والأطراف. الحروق ناتجة عن تعرض الجسد لمادة حارقة (على الأرجح بنزين أو مادة مشابهة).
+الاختناق: تم العثور على آثار دخان في الرئتين، مما يشير إلى أن الضحية استنشقت كميات كبيرة من الدخان أثناء الحريق، مما أدى إلى فشل تنفسي حاد.
+إصابات ما قبل الوفاة:
+محاولة اغتصاب: تم العثور على آثار تمزقات في منطقة الأعضاء التناسلية، بالإضافة إلى كدمات على الفخذين والذراعين، مما يشير إلى مقاومة الضحية لمحاولة اغتصاب.
+إصابات خارجية: كدمات على الوجه والرقبة، تدل على تعرض الضحية للضرب والخنق قبل الوفاة.
+الوقت المقدر للوفاة:
+بناءً على درجة حرارة الجسم وحالة التحلل، تم تقدير وقت الوفاة قبل 14-16 ساعات من العثور على الجثة.
+الخلاصة:
+الوفاة ناتجة عن احتراق شديد بسبب تعرض الجسد لمادة حارقة، مع وجود دلائل على محاولة اغتصاب لم تتم بسبب مقاومة الضحية. الحالة تُصنف كجريمة قتل مع محاولة اعتداء جنسي.
+التوصيات:
+ضرورة فتح تحقيق جنائي لتحديد هوية الجاني أو الجناة.
+الحفاظ على الأدلة المادية (ملابس الضحية، آثار الحريق، إلخ) لدعم التحقيق.
+التوقيع:
+الدكتور سامي</p>
+    </div>
+    <div class="image-container">
+        <img class="small-image" src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/elabdiabdo.jpg" alt="صورة بحجم 16:9">
+    </div>
+
+    <footer>
+        <p>اداب لابت</p>
+    </footer>
+
+    <!-- JavaScript للتبديل التلقائي -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slides");
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                if (i === index) {
+                    slide.classList.add("active");
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // التبديل التلقائي كل 5 ثوانٍ
+        setInterval(nextSlide, 5000);
+
+        // عرض الشريحة الأولى عند التحميل
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
