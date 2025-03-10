@@ -7,332 +7,85 @@
     <meta property="og:title" content="روايات الأديب عبد العزيز العبدي - أدب لايت">
     <meta property="og:description" content="صفحة مخصصة لعرض روايات الأديب عبد العزيز العبدي، بما في ذلك روايتي 'المغتصبة: سيرة فاطمة المسارية' و 'حريق الدم'.">
     <meta property="og:image" content="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/elabdi.png">
-    <meta property="og:url" content="https://example.com/page.html">
+    <meta property="og:url" content="https://adablight.info">
     <meta property="og:type" content="website">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap"></noscript>
-    <link rel="icon" type="image/x-icon" href="https://example.com/favicon.ico">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&amp;display=swap"></noscript>
+    <link rel="stylesheet" href="styles.css"> <!-- ربط ملف CSS -->
+    <link rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/-1hoXF6nt0jY/Zy3LmBFI90I/AAAAAAAAF_g/ipr4G0bXtdM_cj0vCvIWTLtFeFsMFHYKgCK4BGAsYHg/1000019516.png">
     <title>روايات الأديب عبد العزيز العبدي - أدب لايت</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #ffffff;
-            color: black;
-            border-bottom: 1px solid #ccc;
-            width: 100%;
-        }
-        html, body {
-            overflow-x: hidden; /* منع التمرير الأفقي */
-            width: 100%;
-        }
-        .slider {
-            max-width: 100%; /* التأكد من أن السلايدر لا يتجاوز العرض */
-        }
-        img {
-            max-width: 100%; /* منع الصور من تجاوز عرض الشاشة */
-            height: auto;
-        }
-        .content {
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
-            max-width: 90%;
-            text-align: center;
-        }
-        .video-container {
-            text-align: center;
-            margin: 20px 0;
-            width: 90%;
-            max-width: 800px;
-        }
-        iframe {
-            width: 80%;
-            height: 300px;
-            border-radius: 10px;
-        }
-        .slider {
-            position: relative;
-            max-width: 220px; /* تقليل العرض */
-            max-height: 320px;
-            width: 100%;
-            margin: auto;
-            overflow: hidden;
-            aspect-ratio: 9/16; /* الحفاظ على نسبة العرض إلى الارتفاع */
-            border: 1px solid #ccc;
-            border-radius: 10px;
-        }
-        .slides {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            pointer-events: none;
-        }
-        .slides.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-        .slides img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .overlay {
-            position: absolute;
-            top: 90%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            background-color: rgba(0, 76, 75, 0.62);
-            padding: 5px;
-            border-radius: 15px;
-        }
-        .overlay h2 {
-            font-size: 12px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #ffffff;
-            color: black;
-            border-top: 1px solid #ccc;
-            width: 100%;
-        }
-        .image-container {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-            border-radius: 15px;
-        }
-        .small-image {
-            width: 80%;
-            max-width: 640px;
-            height: auto;
-            border-radius: 15px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #0056b3;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background-color: #004080;
-        }
-        .container2 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(172, 245, 178, 0.37); /* خلفية شبه شفافة */
-            padding: 20px;
-            border-radius: 10px;
-            width: 80vw; /* عرض الصندوق */
-            max-width: 800px;
-        }
-        .container3 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(245, 129, 125, 0.37); /* خلفية شبه شفافة */
-            padding: 20px;
-            border-radius: 10px;
-            width: 80vw; /* عرض الصندوق */
-            max-width: 800px;
-        }
-        .custom-quote {
-            font-size: 48px; /* تكبير حجم العلامات */
-            color: red;      /* تغيير لون العلامات */
-            font-weight: bold; /* جعل العلامات عريضة */
-            position: relative; /* تحديد الوضع النسبي */
-            top: 10px; /* تحريك العلامة 5px من الأعلى */
-        }
-        .container1 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(245, 245, 245, 0.65); /* خلفية شبه شفافة */
-            padding: 20px;
-            border-radius: 10px;
-            width: 80vw; /* عرض الصندوق */
-            max-width: 800px;
-            margin: 0 auto; /* توسيط الصندوق */
-            overflow-x: auto; /* التمرير الأفقي إذا لزم الأمر */
-        }
-        .image-box {
-            width: 80px; /* عرض الصورة */
-            height: 160px; /* ارتفاع الصورة */
-            margin: 10px;
-            overflow: hidden;
-            border-radius: 5px;
-            flex-shrink: 0; /* منع الصور من التقلص */
-        }
-        .image-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        /* Media Queries للشاشات الصغيرة */
-        @media (max-width: 768px) {
-            .container1 {
-                width: 90vw; /* زيادة العرض على الشاشات الصغيرة */
-                padding: 10px; /* تقليل الحشو */
-            }
-            .image-box {
-                width: 60px; /* تقليل عرض الصورة */
-                height: 120px; /* تقليل ارتفاع الصورة */
-                margin: 5px; /* تقليل الهوامش */
-            }
-        }
-        @media (max-width: 480px) {
-            .container1 {
-                width: 95vw; /* زيادة العرض على الشاشات الصغيرة جدًا */
-            }
-            .image-box {
-                width: 50px; /* تقليل عرض الصورة أكثر */
-                height: 100px; /* تقليل ارتفاع الصورة أكثر */
-                margin: 5px; /* تقليل الهوامش */
-            }
-        }
-        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap');
-        .coming-soon {
-            font-family: 'Tajawal', sans-serif;
-            font-size: 30px;
-            font-weight: bold;
-            text-align: center;
-            color: white;
-            letter-spacing: 1px;
-            text-shadow: 0 0 10px rgba(255, 138, 0, 0.8), 
-                         0 0 20px rgba(229, 46, 113, 0.8);
-            animation: glow 1.5s infinite alternate;
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 8px;
-            background: linear-gradient(45deg, #ff8a00, #e52e71);
-            box-shadow: 0 4px 15px rgba(229, 46, 113, 0.4);
-            transition: transform 0.3s ease-in-out;
-        }
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 5px rgba(255, 138, 0, 0.6), 
-                             0 0 10px rgba(229, 46, 113, 0.6);
-            }
-            100% {
-                text-shadow: 0 0 15px rgba(255, 138, 0, 0.8), 
-                             0 0 30px rgba(229, 46, 113, 0.8);
-            }
-        }
-        .coming-soon:hover {
-            transform: scale(1.05);
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1 style="font-weight: bold; font-family: 'Tajawal'; font-size: 28px;">الأديب عبد العزيز العبدي</h1>
+        <h1>الأديب عبد العزيز العبدي</h1>
     </header>
-    <h2 style="font-weight: bold; font-family: 'Tajawal'; font-size: 38px;">رواية</h2>
+    <h2>رواية</h2>
     <div class="image-container">
-        <img class="small-image" src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/elabdi.png" alt="غلاف رواية الأديب عبد العزيز العبدي">
+        <img class="small-image" src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/elabdi.png" alt="غلاف رواية الأديب عبد العزيز العبدي" width="800" height="600" loading="lazy">
     </div>
     <div class="container2">
-        <p style="font-weight: bold; font-family: 'Tajawal'; font-size: 18px;"><span class="custom-quote">"</span>
+        <p><span class="custom-quote">"</span>
         صدر في بداية هذه السنة للكاتب والروائي عبد العزيز العبدي روايتين موسومتين ب"المغتصبة: سيرة فاطمة المسارية" و "حريق الدم"<br/>
         الرواية الأولى مستلهمة ومستوحاة من مأساة حقيقية في منطقة زومي المغربية حين تعرضت سيدة لمحاولة اغتصاب انتهت بقتلها حرقا.. كما عالجت الرواية أيضًا التحولات العميقة التي عرفتها المنطقة مع دخول زراعة عشبة الكيف..<br/>
         الرواية الثانية "حريق الدم" يعالج فيها الكاتب قضايا العلاقات عبر مرآة التاريخ: تجد فيها الخيانة، الزواج المختلط، قوات الgoum وفضاعاتهم في الحرب العالمية الثانية، كمدخل إبداعي لملامسة تلك الذاكرة والجرح المؤلم الذي لخصه الإيطاليون في كلمة marroccinate. استعان فيها الكاتب بالتاريخ والعلم والطب..<span class="custom-quote">"</span></p>
     </div>
     <br/><hr/>
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/2x-DWv2rqv4?si=OZ7EywV-7azOgU1N" frameborder="0" allowfullscreen></iframe>
+        <iframe 
+            src="https://www.youtube.com/embed/2x-DWv2rqv4?si=OZ7EywV-7azOgU1N" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+            loading="lazy">
+        </iframe>
     </div>
     <hr>
     <br/>
     <div class="container3">
-        <p style="font-weight: bold; font-family: 'Tajawal'; font-size: 18px;"><a class="btn" href="https://wa.me/212630051248?text=أريد%20اقتناء%20الرواية" target="_blank">الثمن 80DH للنسخة و التوصيل مجاني.</a></p>
+        <p><a class="btn" href="https://wa.me/212630051248?text=أريد%20اقتناء%20الرواية" target="_blank">الثمن 80DH للنسخة و التوصيل مجاني.</a></p>
     </div>
     <br/><hr/>
     <br/><hr/>
     <div class="container1">
         <div class="image-box">
             <a href="https://wa.me/212630051248?text=أريد%20اقتناء%20الرواية" target="_blank">
-                <img src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/5.jpg" alt="صورة 5">
+                <img src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/5.jpg" alt="صورة 5" loading="lazy">
             </a>
         </div>
         <div class="image-box">
             <a href="https://wa.me/212630051248?text=أريد%20اقتناء%20الرواية" target="_blank">
-                <img src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/6.jpg" alt="صورة 6">
+                <img src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/6.jpg" alt="صورة 6" loading="lazy">
             </a>
         </div>
         <div class="image-box">
             <a href="https://wa.me/212630051248?text=أريد%20اقتناء%20الرواية" target="_blank">
-                <img src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/1.jpg" alt="صورة 1">
+                <img src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/1.jpg" alt="صورة 1" loading="lazy">
             </a>
         </div>
         <div class="image-box">
             <a href="https://www.amazon.com/s?k=%D8%B7%D8%B1%D8%B3%D8%A7%D9%86%D8%A9&rh=n%3A283155&crid=LR6KO0SRXQ8P&sprefix=%D8%B7%D8%B1%D8%B3%D8%A9%2Caps%2C223&ref=nb_sb_noss">
-                <img src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/2.jpg" alt="صورة 2">
+                <img src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/2.jpg" alt="صورة 2" loading="lazy">
             </a>
         </div>
         <div class="image-box">
             <a href="https://www.amazon.com/s?k=%D8%B1%D8%A3%D8%B3+%D9%88%D9%82%D8%AF%D9%85%D8%A7%D9%86&rh=n%3A283155&crid=2TWICKUYFV5I2&sprefix=%2Caps%2C207&ref=nb_sb_ss_recent_1_0_recent">
-                <img src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/3.jpg" alt="صورة 3">
+                <img src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/3.jpg" alt="صورة 3" loading="lazy">
             </a>
         </div>
         <div class="image-box">
             <a href="#">
-                <img src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/4.jpg" alt="صورة 4">
+                <img src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/4.jpg" alt="صورة 4" loading="lazy">
             </a>
         </div>
     </div>
     <hr/>
     <h2 class="coming-soon">قريبًا</h2>
     <div class="image-container">
-        <img class="small-image" src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/question.gif" alt="صورة بحجم 16:9">
+        <img class="small-image" src="https://raw.githubusercontent.com/SiwaneXYZ/Elabdi/refs/heads/main/img/question.gif" alt="صورة بحجم 16:9" loading="lazy">
     </div>
     <footer>
         <p>أدب لايت</p>
     </footer>
-    <!-- JavaScript للتبديل التلقائي -->
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll(".slides");
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.remove("active");
-                if (i === index) {
-                    slide.classList.add("active");
-                }
-            });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        // التبديل التلقائي كل 5 ثوانٍ
-        setInterval(nextSlide, 5000);
-
-        // عرض الشريحة الأولى عند التحميل
-        showSlide(currentSlide);
-    </script>
+    <script src="scripts.js" defer></script> <!-- ربط ملف JavaScript -->
 </body>
 </html>
