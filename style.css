@@ -1,0 +1,216 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            color: black;
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+        }
+        html, body {
+    overflow-x: hidden; /* منع التمرير الأفقي */
+    width: 100%;
+}
+
+.slider {
+    max-width: 100%; /* التأكد من أن السلايدر لا يتجاوز العرض */
+}
+
+img {
+    max-width: 100%; /* منع الصور من تجاوز عرض الشاشة */
+    height: auto;
+}
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 90%;
+            text-align: center;
+        }
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+            width: 90%;
+            max-width: 800px;
+        }
+        iframe {
+            width: 80%;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+       .slider {
+    position: relative;
+    max-width: 220px; /* تقليل العرض */
+    max-height: 320px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    aspect-ratio: 9/16; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.slides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+}
+
+.slides.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 76, 75, 0.62);
+    padding: 5px;
+    border-radius: 15px;
+}
+.overlay h2 {
+  font-size: 12px;
+}
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ffffff;
+            color: black;
+            border-top: 1px solid #ccc;
+            width: 100%;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            border-radius: 15px;
+        }
+        .small-image {
+            width: 80%;
+            max-width: 640px;
+            height: auto;
+            border-radius: 15px;
+        }
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0056b3;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(172, 245, 178, 0.37); /* خلفية شبه شفافة */
+  padding: 20px;
+  border-radius: 10px;
+  width: 80vw; /* عرض الصندوق */
+  max-width: 800px;
+}
+.container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(245, 129, 125, 0.37); /* خلفية شبه شفافة */
+  padding: 20px;
+  border-radius: 10px;
+  width: 80vw; /* عرض الصندوق */
+  max-width: 800px;
+}
+.custom-quote {
+         font-size: 48px; /* تكبير حجم العلامات */
+         color: red;      /* تغيير لون العلامات */
+         font-weight: bold; /* جعل العلامات عريضة */
+         position: relative; /* تحديد الوضع النسبي */
+         top: 10px; /* تحريك العلامة 5px من الأعلى */
+     }
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(245, 245, 245, 0.65); /* خلفية شبه شفافة */
+  padding: 20px;
+  border-radius: 10px;
+  width: 80vw; /* عرض الصندوق */
+  max-width: 800px;
+  margin: 0 auto; /* توسيط الصندوق */
+  overflow-x: auto; /* التمرير الأفقي إذا لزم الأمر */
+}
+
+.image-box {
+  width: 80px; /* عرض الصورة */
+  height: 160px; /* ارتفاع الصورة */
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+  flex-shrink: 0; /* منع الصور من التقلص */
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Media Queries للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .container1 {
+    width: 90vw; /* زيادة العرض على الشاشات الصغيرة */
+    padding: 10px; /* تقليل الحشو */
+  }
+
+  .image-box {
+    width: 60px; /* تقليل عرض الصورة */
+    height: 120px; /* تقليل ارتفاع الصورة */
+    margin: 5px; /* تقليل الهوامش */
+  }
+}
+
+@media (max-width: 480px) {
+  .container1 {
+    width: 95vw; /* زيادة العرض على الشاشات الصغيرة جدًا */
+  }
+
+  .image-box {
+    width: 50px; /* تقليل عرض الصورة أكثر */
+    height: 100px; /* تقليل ارتفاع الصورة أكثر */
+    margin: 5px; /* تقليل الهوامش */
+  }
+}
